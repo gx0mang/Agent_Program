@@ -13,6 +13,8 @@
 [![Chroma](https://img.shields.io/badge/Chroma-1.5.9-blueviolet)](https://www.trychroma.com/)
 &nbsp;
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.62.0-red)](https://streamlit.io/)
+&nbsp;
+[![License](https://img.shields.io/badge/License-MIT-yellow)](./LICENSE)
 
 </div>
 
@@ -222,6 +224,8 @@ Agent_Program/
 ├── assets/                           # 效果展示截图（待补充）
 ├── app.py                            # Streamlit 应用入口
 ├── requirements.txt
+├── .env.example                      # 环境变量模板
+├── LICENSE                           # MIT 开源许可证
 └── README.md
 ```
 
@@ -274,7 +278,7 @@ Agent_Program/
 
 ## License
 
-本项目暂未添加开源许可证。
+本项目基于 [MIT License](./LICENSE) 开源。
 
 ---
 
