@@ -30,11 +30,23 @@
 
 ## 效果展示
 
-<!-- 截图待补充：建议放置三张 —— 知识库问答 / 工具调用链路 / 报告生成结果 -->
-
 <div align="center">
 
-_（界面截图待补充）_
+<img src="assets/chat1.png" alt="知识库问答" width="85%">
+
+*图1. 普通问答 — RAG 检索知识库回复*
+
+&nbsp;
+
+<img src="assets/chat2.png" alt="Agent 工具调用" width="85%">
+
+*图2. Agent 工具调用 — 实时展示推理与工具执行链路*
+
+&nbsp;
+
+<img src="assets/chat3.png" alt="报告生成" width="85%">
+
+*图3. 报告生成 — 多工具编排与动态提示词切换*
 
 </div>
 
@@ -221,7 +233,7 @@ Agent_Program/
 │   ├── 维护保养.txt
 │   └── external/records.csv          # 用户使用记录（构造数据）
 │
-├── assets/                           # 效果展示截图（待补充）
+├── assets/                           # 效果展示截图
 ├── app.py                            # Streamlit 应用入口
 ├── requirements.txt
 ├── .env.example                      # 环境变量模板
@@ -271,8 +283,7 @@ Agent_Program/
 1. **4 个外部数据工具为模拟实现**。`get_weather`、`get_user_location`、`get_user_id`、`get_current_month` 均返回预设的固定值或随机值，未接入任何真实数据源。
 2. **月份数据固定在 2025 年**。`get_current_month` 的可选值数组写死为 2025 年 1–12 月。
 3. **业务数据为构造数据**。`data/external/records.csv` 中的用户使用记录为人工构造，仅用于演示报告生成的完整链路。
-4. **向量库持久化路径为相对路径**。`config/chroma.yml` 中的 `persist_directory` 未做绝对路径解析，实际存储位置会随执行时的工作目录变化，不同目录下运行可能生成多份索引。
-5. 暂未编写自动化测试。
+4. 暂未编写自动化测试。
 
 只有 `rag_summarize` 是基于真实知识库的语义检索；其余涉及「用户」「天气」的能力均为占位实现。
 
